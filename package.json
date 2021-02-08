@@ -1,7 +1,7 @@
 {
     "name": "code-to-pdf",
     "description": "Generate a submission pdf from program files",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "author": "Junaid Rahim @junaidrahim",
     "bin": {
         "code-to-pdf": "./bin/run"
@@ -11,7 +11,7 @@
         "@oclif/command": "^1.8.0",
         "@oclif/config": "^1.17.0",
         "@oclif/plugin-help": "^3.2.2",
-        "markdown-pdf": "^10.0.0",
+        "md-to-pdf": "^3.2.1",
         "prompt-sync": "^4.2.0"
     },
     "devDependencies": {
