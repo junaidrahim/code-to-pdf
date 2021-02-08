@@ -1,7 +1,7 @@
 {
     "name": "code-to-pdf",
     "description": "Generate a submission pdf from program files",
-    "version": "1.1rm .0",
+    "version": "1.1.2",
     "author": "Junaid Rahim @junaidrahim",
     "bin": {
         "code-to-pdf": "./bin/run"
