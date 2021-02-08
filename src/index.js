@@ -34,26 +34,32 @@ class CodeToPdfCommand extends Command {
         const dir = flags.dir;
         const output = flags.output || "assignment";
 
-        fs.readdir(dir, (err, files) => {
-            const assignment_name = prompt("Assignment Name: ");
-            const name = prompt("Enter Name: ");
-            const roll_no = prompt("Enter Roll Number: ");
+        if (dir) {
+            fs.readdir(dir, (err, files) => {
+                const assignment_name = prompt("Assignment Name: ");
+                const name = prompt("Enter Name: ");
+                const roll_no = prompt("Enter Roll Number: ");
 
-            const md = MarkdownContent(
-                assignment_name,
-                name,
-                roll_no,
-                dir,
-                files
-            );
+                const md = MarkdownContent(
+                    assignment_name,
+                    name,
+                    roll_no,
+                    dir,
+                    files
+                );
 
-            fs.writeFileSync(`${output}.md`, md);
-            markdownpdf()
-                .from(`${output}.md`)
-                .to(`${output}.pdf`, function () {
-                    console.log(`PDF Successfully Generated: ${output}.pdf`);
-                });
-        });
+                fs.writeFileSync(`${output}.md`, md);
+                markdownpdf()
+                    .from(`${output}.md`)
+                    .to(`${output}.pdf`, function () {
+                        console.log(
+                            `PDF Successfully Generated: ${output}.pdf`
+                        );
+                    });
+            });
+        } else {
+			this.log("Bruh, mention a directory")
+		}
     }
 }
 
