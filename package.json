@@ -1,0 +1,45 @@
+{
+  "name": "code-to-pdf",
+  "description": "Generate a submission pdf from program files",
+  "version": "1.0.0",
+  "author": "Junaid Rahim @junaidrahim",
+  "bin": {
+    "code-to-pdf": "./bin/run"
+  },
+  "bugs": "https://github.com/junaidrahim/code-to-pdf/issues",
+  "dependencies": {
+    "@oclif/command": "^1.8.0",
+    "@oclif/config": "^1.17.0",
+    "@oclif/plugin-help": "^3.2.2",
+    "markdown-pdf": "^10.0.0",
+    "prompt-sync": "^4.2.0"
+  },
+  "devDependencies": {
+    "@oclif/dev-cli": "^1.26.0",
+    "eslint": "^5.16.0",
+    "eslint-config-oclif": "^3.1.0"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "files": [
+    "/bin",
+    "/src"
+  ],
+  "homepage": "https://github.com/junaidrahim/code-to-pdf",
+  "keywords": [
+    "oclif"
+  ],
+  "license": "MIT",
+  "main": "src/index.js",
+  "oclif": {
+    "bin": "code-to-pdf"
+  },
+  "repository": "junaidrahim/code-to-pdf",
+  "scripts": {
+    "posttest": "eslint .",
+    "prepack": "oclif-dev readme",
+    "test": "echo NO TESTS",
+    "version": "oclif-dev readme && git add README.md"
+  }
+}
